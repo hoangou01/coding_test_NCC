@@ -1,0 +1,311 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+:root {
+  --white-color: #fff;
+  --black-color: #000;
+  --text-color: #333;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+/****** define my bootrap *********/
+/***********************************/
+.container {
+  padding-left: auto;
+  padding-right: auto;
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-md-2 {
+  padding-left: 12px;
+  padding-right: 12px;
+  width: 16.6667%;
+}
+
+.col-md-3 {
+  padding-left: 12px;
+  padding-right: 12px;
+  width: 25%;
+}
+
+.col-md-4 {
+  padding-left: 12px;
+  padding-right: 12px;
+  width: 33.332%;
+}
+
+.col-md-6 {
+  padding-left: 12px;
+  padding-right: 12px;
+  width: 50%;
+}
+
+.col-md-8 {
+  padding-left: 12px;
+  padding-right: 12px;
+  width: 66.6666667%;
+}
+
+.text-red {
+  color: red;
+}
+
+/***************************/
+.left_nav {
+  background-color: #000;
+  /* margin-left: -12px; */
+  height: 100vh;
+}
+
+.list_nav {
+  /* padding-left: 10px; */
+  display: flex;
+  flex-direction: column;
+}
+
+.list_nav>li {
+  list-style: none;
+  padding: 0 !important;
+  padding-top: 20px !important;
+  /* margin-top: 20px; */
+  text-align: center;
+  padding-bottom: 20px !important;
+  border-bottom: .5px solid #999797;
+
+
+}
+.list_nav>li:hover{
+  background-color: #ccc;
+}
+.list_nav>li>a {
+  text-decoration: none;
+  color: #fff;
+
+}
+
+.content {
+  padding-left: 10%;
+  text-align: center;
+}
+.tittle_logo{
+  font-size: 22px;
+}
+.lorem_section {
+  margin-top: 10px;
+  color: #767575;
+  text-align: center;
+  padding: 40px 80px;
+  background-color: #e8e7e7;
+}
+.lorem_section > .tittle{
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 20px !important;
+}
+.lorem_content{
+  margin-top: 10px;
+}
+.items_section{
+  margin-top: 20px;
+}
+.items > .tittle{
+  font-size: 14px;
+  color: #000;
+  font-weight: 800;
+  margin-left: -20px;
+  margin-bottom: 10px !important;
+  padding: 0 !important;
+}
+.item_content{}
+.item_content_img{
+  float: left;
+  width: 80px;
+  border: 1px solid #ccc;
+  height: 80px;
+}
+.item_content > span{
+  
+}
+/*********** responsive ***********/
+.nav_mobile {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 320px;
+  background-color: #fff;
+  max-width: 100%;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all linear .5s;
+}
+
+.nav_mobile-lists{
+  margin-top:65px;
+  width: 100%;
+  padding-top: 15px;
+  border-top: 1px solid cadetblue;
+}
+.nav__mobile-close{
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  font-size: 2rem;
+  color: cadetblue;
+ 
+}
+.nav_input-mobile:checked ~ .nav_overlayout{
+  display: block;
+}
+.nav_input-mobile:checked ~ .nav_mobile{
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.nav_mobile-link{
+  display: block;
+  color: #333;
+  margin-top: 20px;
+  padding: 0 10px;
+  font-size: 1.4rem;
+}
+.nav_mobile-link > a {
+  color: cadetblue;
+}
+/***** mobile & tablet **********/
+@media (max-width : 1023px) {
+  .hide-Tablet-Mobile {
+      display: none;
+  }
+  .Show-Mobile-tablet {
+      display: block;
+  }
+  .lorem_section{
+      padding: 5px 10px;
+  }
+  .content{
+      width: 100%;
+      padding: 5px 10px !important;
+  }
+  .items{
+      width: 100%;
+      margin-bottom: 30px;
+  }
+  .items > .item_content{
+      margin-top: 10px;
+  }
+
+}
+
+/*********** tablet **********/
+@media (min-width : 740px) and (max-width : 1023px) {
+  .Show-table {
+      display: block;
+  }
+  .hide-Tablet {
+      display: none;
+  }
+  .hide-Tablet-Mobile {
+      display: none;
+  }
+  .lorem_section{
+      padding: 5px 10px;
+  }
+  
+  .items{
+      width: 100%;
+      margin-bottom: 30px;
+  }
+  .items > .item_content{
+      margin-top: 10px;
+  }
+
+}
+
+/*********** moible **********/
+@media (max-width : 739px) {
+  .hide-Mobile {  
+      display: none;
+  }
+
+  .Show-Mobile {
+      display: block;
+  }
+
+  .aboutme-h2 {
+      text-align: center;
+      display: block;
+  }
+
+  #logo>a {
+      margin-left: 0px;
+  }
+
+  /********** header *********/
+  
+  .nav_mobile{
+      display: block;
+  }
+  
+  
+  
+  .IconShowListNav > svg{
+      color: rgb(26, 26, 26) !important;
+
+  }
+
+}
